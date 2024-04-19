@@ -1,0 +1,10 @@
+GET http://localhost:3001/api/notes/
+
+### // this allows to do multiple rquests in one file
+POST http://localhost:3001/api/notes/ 
+content-type: application/json
+
+{
+    "content": "sample",
+    "important": true
+}

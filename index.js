@@ -25,7 +25,7 @@ const logNonPost = (request, response, next) => {
 app.use(express.json()) // json to object to be tied to the request body before put to route
 // app.use(morgan('tiny'))
 app.use(logNonPost)
-app.use(cors)
+app.use(cors())
 
 app.use(morgan(':method :url :status :response-time ms :post', {
   skip: (request, response) => request.method !== 'POST' || !request.body

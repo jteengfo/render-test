@@ -26,6 +26,7 @@ app.use(express.json()) // json to object to be tied to the request body before 
 // app.use(morgan('tiny'))
 app.use(logNonPost)
 app.use(cors())
+app.use(express.static('dist'))
 
 app.use(morgan(':method :url :status :response-time ms :post', {
   skip: (request, response) => request.method !== 'POST' || !request.body
